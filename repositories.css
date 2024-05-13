@@ -1,0 +1,149 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #0366d6;
+}
+
+/* Main container styling */
+.main-container {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tab styling */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Tab links/buttons */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 0.5s; /* Fading effect takes 0.5 second */
+}
+
+/* Fading animation */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.copy-btn {
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 10px; /* Add space between the button and the code */
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the code editor */
+code {
+    max-height: 300px; /* Adjust based on your preference */
+    overflow-y: auto; /* Allows scrolling vertically */
+    background: #282c34; /* Dark background for the code */
+    color: #abb2bf; /* Light grey text color */
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+    white-space: pre-wrap; /* Allows code to wrap */
+    overflow-x: auto;
+}
+
+/* Exceptional code editor highlight */
+code {
+    border: 1px solid #56b6c2;
+    background: linear-gradient(145deg, #1e2229, #282c34);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Adjustments for specific code language tabs */
+#HTML1-1 code, #HTML2-2 code, #HTML3-3 code {
+    border-color: #e06c75; /* Different color for HTML */
+}
+
+#CSS1-1 code, #CSS2-2 code, #CSS3-3 code {
+    border-color: #c678dd; /* Different color for CSS */
+}
+
+#JS1-1 code, #JS2-2 code, #JS3-3 code {
+    border-color: #61afef; /* Different color for JS */
+}
+
+
+
+.goBack {
+    background: linear-gradient(45deg, #ff8c00, #ffa500);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .goBack img {
+    margin-left: 8px;
+    height: 18px;
+    transition: all 0.5s;
+  }
+  
+  .goBack:hover {
+    background: linear-gradient(45deg, #ffa500, #ff8c00);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+  }
+  
+  .goBack:hover img {
+    transform: translateX(5px);
+  }
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Code Repository</title>
+    <link rel="stylesheet" href="repositories.css">
+</head>
+<body>
+
+    <button class="goBack" onclick="location.href='index.html'">Go back
+    <img src="./images/back-button.png" alt="back">
+    </button>
+<h2>Code Repository</h2>
+
+<div class="main-container" id="first">
+    <h3>A simple website</h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Sample1', 'first')" id="defaultOpen1">Sample</button>
+        <button class="tablinks" onclick="openTab(event, 'SourceCode1-1', 'first')">Source Code</button>
+    </div>
+    <div id="Sample1" class="tabcontent">
+        <h3>Sample</h3>
+        <p>Sample is the default open tab.</p>
+    </div>
+    <div id="SourceCode1-1" class="tabcontent">
+        <h3>Source Code</h3>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'HTML1-1', 'SourceCode1-1')" id="defaultOpenHTML1-1">HTML</button>
+            <button class="tablinks" onclick="openTab(event, 'CSS1-1', 'SourceCode1-1')">CSS</button>
+            <button class="tablinks" onclick="openTab(event, 'JS1-1', 'SourceCode1-1')">JS</button>
+        </div>
+        <div id="HTML1-1" class="tabcontent">
+            <h3>HTML Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('HTML1-1')">Copy</button>
+            <pre><code>&lt;!-- Dummy HTML Code --&gt;
+&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.&lt;/p&gt;
+    &lt;button&gt;Learn More&lt;/button&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Our Services&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Service 1&lt;/li&gt;
+      &lt;li&gt;Service 2&lt;/li&gt;
+      &lt;li&gt;Service 3&lt;/li&gt;
+      &lt;li&gt;Service 4&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 Our Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+        </div>
+        
+        <div id="CSS1-1" class="tabcontent">
+            <h3>CSS Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('CSS1-1')">Copy</button>
+            <pre><code>/* Dummy CSS Code */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+</code></pre>
+        </div>
+        <div id="JS1-1" class="tabcontent">
+            <h3>Js Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('JS1-1')">Copy</button>
+            <pre><code>// Dummy JavaScript Code
+const navLinks = document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetSection = document.querySelector(e.target.hash);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#message');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  // Send form data to server (replace with your logic)
+  console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+  // Reset form fields
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
+});
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="main-container" id="second">
+    <h3>Second</h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Sample2', 'second')" id="defaultOpen2">Sample</button>
+        <button class="tablinks" onclick="openTab(event, 'SourceCode2-2', 'second')">Source Code</button>
+    </div>
+    <div id="Sample2" class="tabcontent">
+        <h3>Sample</h3>
+        <p>Sample is the default open tab.</p>
+    </div>
+    <div id="SourceCode2-2" class="tabcontent">
+        <h3>Source Code</h3>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'HTML2-2', 'SourceCode2-2')" id="defaultOpenHTML2-2">HTML</button>
+            <button class="tablinks" onclick="openTab(event, 'CSS2-2', 'SourceCode2-2')">CSS</button>
+            <button class="tablinks" onclick="openTab(event, 'JS2-2', 'SourceCode2-2')">JS</button>
+        </div>
+        <div id="HTML2-2" class="tabcontent">
+            <h3>HTML Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('HTML2-2')">Copy</button>
+            <pre><code>&lt;div&gt;Hello, world!&lt;/div&gt;
+        &lt;header&gt;Welcome to My Website&lt;/header&gt;
+        &lt;p&gt;This is a paragraph of text designed to fill out the space for testing the height of the code panel.&lt;/p&gt;
+        &lt;footer&gt;Copyright © 2024&lt;/footer&gt;</code></pre>
+        </div>
+        
+        <div id="CSS2-2" class="tabcontent">
+            <h3>CSS Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('CSS2-2')">Copy</button>
+            <pre><code>div { color: red; }</code></pre>
+        </div>
+        <div id="JS2-2" class="tabcontent">
+            <h3>Js Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('JS2-2')">Copy</button>
+            <pre><code>console.log('Hello World');</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="main-container" id="third">
+    <h3>Third</h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Sample3', 'third')" id="defaultOpen3">Sample</button>
+        <button class="tablinks" onclick="openTab(event, 'SourceCode3-3', 'third')">Source Code</button>
+    </div>
+    <div id="Sample3" class="tabcontent">
+        <h3>Sample</h3>
+        <p>Sample is the default open tab.</p>
+    </div>
+    <div id="SourceCode3-3" class="tabcontent">
+        <h3>Source Code</h3>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'HTML3-3', 'SourceCode3-3')" id="defaultOpenHTML3-3">HTML</button>
+            <button class="tablinks" onclick="openTab(event, 'CSS3-3', 'SourceCode3-3')">CSS</button>
+            <button class="tablinks" onclick="openTab(event, 'JS3-3', 'SourceCode3-3')">JS</button>
+        </div>
+        <div id="HTML3-3" class="tabcontent">
+            <h3>HTML Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('HTML3-3')">Copy</button>
+            <pre><code>&lt;div&gt;Hello, world!&lt;/div&gt;
+        &lt;header&gt;Welcome to My Website&lt;/header&gt;
+        &lt;p&gt;This is a paragraph of text designed to fill out the space for testing the height of the code panel.&lt;/p&gt;
+        &lt;footer&gt;Copyright © 2024&lt;/footer&gt;</code></pre>
+        </div>
+        <div id="CSS3-3" class="tabcontent">
+            <h3>CSS Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('CSS3-3')">Copy</button>
+            <pre><code>div { color: red; }</code></pre>
+        </div>
+        <div id="JS3-3" class="tabcontent">
+            <h3>Js Code</h3>
+            <button class="copy-btn" onclick="copyToClipboard('JS3-3')">Copy</button>
+            <pre><code>console.log('Hello World');</code></pre>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

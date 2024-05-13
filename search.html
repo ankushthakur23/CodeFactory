@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+    <div id="searchWrapper">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for Repos">
+        <div id="cheatsheetContainer"></div>
+    </div>
+    
+
+<script>
+var cheatsheets = [
+    "Bash", "Git", "Grep", "Netcat", "Python", "JavaScript", "HTML", "CSS", "Java", "C++",
+    "C#", "PHP", "Ruby", "Swift", "Kotlin", "Go", "Rust", "TypeScript", "Shell", "R",
+    "Scala", "Perl", "Lua", "Groovy", "MATLAB", "SQL", "NoSQL", "MongoDB", "PostgreSQL", "SQLite",
+    "Docker", "Kubernetes", "AWS", "Azure", "GCP", "Ansible", "Jenkins", "Terraform", "Puppet", "Chef",
+    "Elasticsearch", "Logstash", "Kibana", "Prometheus", "Grafana", "GitLab", "GitHub", "Bitbucket", "SVN", "Mercurial"
+];
+
+window.onload = function() {
+    var container = document.getElementById('cheatsheetContainer');
+    for (var i = 0; i < cheatsheets.length; i++) {
+        var a = document.createElement('a');
+        a.href = "#";
+        a.className = "cheatsheet";
+        a.textContent = cheatsheets[i];
+        container.appendChild(a);
+    }
+}
+
+function searchFunction() {
+    var input, filter, container, a, i;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    container = document.getElementById("cheatsheetContainer");
+    a = container.getElementsByTagName('a');
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
